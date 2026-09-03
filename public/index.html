@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Security Patterns - 攻撃の仕組みと修正コードで学ぶWebセキュリティ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <header id="sidebar-header">
+        <p id="site-kicker">Learn attack, write defense</p>
+        <h1><a href="#home" id="site-title-link">Web Security Patterns</a></h1>
+        <div id="progress-wrap" title="学習進捗はこのブラウザにのみ保存されます">
+          <div id="progress-bar" role="progressbar" aria-label="読了トピック数"
+               aria-valuemin="0" aria-valuemax="15" aria-valuenow="0"><div id="progress-fill"></div></div>
+          <span id="progress-label">0 / 0</span>
+        </div>
+      </header>
+      <div id="toc-search-wrap">
+        <input type="search" id="toc-search" placeholder="トピックを検索（用語でも）"
+               aria-label="トピックを検索（用語でも）" autocomplete="off">
+      </div>
+      <nav id="toc" aria-label="トピック一覧"></nav>
+      <footer id="sidebar-footer">
+        <span>本教材は防御のための知識として提供しています</span>
+      </footer>
+    </aside>
+    <main id="main">
+      <div id="topic-view" hidden></div>
+      <div id="page-view">
+        <h2>読み込み中</h2>
+        <p>教材データを読み込んでいます。</p>
+      </div>
+    </main>
+  </div>
+  <script defer src="app-register.js"></script>
+  <script defer src="content/intro.js"></script>
+  <!--
+    トピック01〜15を読み込む。後続エージェントはファイルを置くだけでよく、
+    このindex.htmlを編集する必要はない（並行編集の競合を避けるため）。
+    未作成のトピックはそのファイルが用意されるまでブラウザで404になるが、
+    defer読み込みのため他スクリプトの実行は妨げず、ページ機能には影響しない。
+    15ファイルが揃えば404は解消する。
+  -->
+  <script defer src="content/topic01.js"></script>
+  <script defer src="content/topic02.js"></script>
+  <script defer src="content/topic03.js"></script>
+  <script defer src="content/topic04.js"></script>
+  <script defer src="content/topic05.js"></script>
+  <script defer src="content/topic06.js"></script>
+  <script defer src="content/topic07.js"></script>
+  <script defer src="content/topic08.js"></script>
+  <script defer src="content/topic09.js"></script>
+  <script defer src="content/topic10.js"></script>
+  <script defer src="content/topic11.js"></script>
+  <script defer src="content/topic12.js"></script>
+  <script defer src="content/topic13.js"></script>
+  <script defer src="content/topic14.js"></script>
+  <script defer src="content/topic15.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
